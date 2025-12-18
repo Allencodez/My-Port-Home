@@ -227,11 +227,6 @@ footer a:hover {
     flex: 1;
   }
 
-  nav li:last-child {
-    display: flex;
-    justify-content: space-evenly;
-  }
-
   nav li a {
     display: flex;
   }
