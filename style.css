@@ -1,0 +1,294 @@
+
+@font-face {
+  font-family: "Poppins";
+  src: url("./fonts/Poppins-Regular.ttf");
+}
+
+* {
+  font-family: poppins;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --main-color: #f9f6f3;
+  --primary-color: #a4eb3f;
+  --secondary-color: #accdf8;
+  --text-color: #2a2a2a;
+  --font-family: poppins;
+  --color-1: #fad9f7;
+  --color-2: #f3f6f9;
+  --color-3: #f6f9f6;
+  --btn-color: grey;
+}
+
+html {
+  color: var(--text-color);
+}
+
+body {
+  padding: 1em;
+  background-color: var(--main-color);
+}
+
+nav {
+  margin-bottom: 1em;
+  width: max(100%, 500px);
+}
+
+nav ul {
+  display: flex;
+  list-style-type: none;
+  align-items: center;
+  gap: 1em;
+}
+
+nav li:first-child {
+  margin-right: auto;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+#sidebar-active {
+  display: none;
+}
+
+.open-side-btn,
+.closed-side-btn {
+  display: none;
+}
+
+header,
+section {
+  margin: auto;
+  width: min(75em, 100%);
+  border-radius: 1em;
+  background-color: var(--color-1);
+  padding: min(2em, 15%);
+  margin-bottom: 2em;
+}
+
+.flex-ctn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 3em;
+}
+
+header img {
+  max-width: 100%;
+  border-radius: 1em;
+  object-fit: cover;
+  object-position: bottom;
+}
+
+.text-ctn {
+  flex: 0 1 34em;
+}
+
+h1 {
+  font-size: 2.5em;
+}
+
+.text-ctn p {
+  margin: 0.75em 0 1em 0;
+  font-size: 1.25rem;
+}
+
+.cta-btn {
+  display: inline-block;
+  text-decoration: none;
+  color: var(--btn-color);
+  background-color: var(--primary-color);
+  padding: 0.75em 1.25em;
+  border-radius: 0.5em;
+  font-weight: 600;
+}
+
+.secondary {
+  background-color: var(--secondary-color);
+}
+
+section {
+  padding: 3em min(2em, 15%);
+  background-color: var(--secondary-color);
+  text-align: center;
+}
+
+section img {
+  max-width: 100%;
+  border-radius: 1em;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+section p {
+  margin-top: 1em;
+  font-size: 1.25rem;
+}
+
+section#My-work {
+  background-color: var(--primary-color);
+  height: 50%;
+}
+
+.grid-ctn {
+  margin-top: 3em;
+  margin-bottom: 3em;
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas:
+    "img-1 img-1 img-2 img-3"
+    "img-1 img-1 img-4 img-5";
+  gap: 1em;
+}
+
+.grid-ctn img {
+  height: 100%;
+  width: 100%;
+  border-radius: 0.5em;
+  transform: 100ms ease;
+}
+
+.grid-ctn img:hover {
+  scale: 1.05;
+}
+
+details {
+  margin-top: 1em;
+  background-color: var(--main-color);
+  border-radius: 1em;
+}
+
+details summary {
+  padding: 1em;
+  font-size: 1.2em;
+}
+
+details p {
+  padding: 0 2em 2em 2em;
+}
+
+footer {
+  padding-bottom: 1.5em;
+  text-align: center;
+}
+
+footer a {
+  margin: 0 1em;
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+.icons {
+  display: none;
+}
+
+.texter {
+  display: none;
+}
+
+@media (max-width: 986px) {
+  header {
+    text-align: center;
+  }
+
+  header .text-ctn {
+    padding-top: 0;
+  }
+}
+
+@media (max-width: 620px) {
+  nav li {
+    display: none;
+  }
+
+  nav li:first-child,
+  nav li:last-child {
+    display: block;
+    flex: 1;
+  }
+
+  nav li:last-child {
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  nav li a {
+    display: flex;
+  }
+
+  header {
+    margin-top: 0;
+  }
+
+  .cta-btn {
+    display: flex;
+    margin: 0.5em auto;
+    text-align: center;
+    color: grey;
+    justify-content: center;
+    font-size: 1.2em;
+  }
+
+  section img {
+    width: 100%;
+  }
+
+  header img {
+    width: 100%;
+  }
+
+  details summary p {
+    padding: none;
+  }
+
+  .links {
+    display: none;
+  }
+
+  .icons {
+    display: inline;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .texter {
+    display: none;
+  }
+
+  .open-side-btn{
+    display: block;
+    margin-right: 2em;
+  }
+}
+
+@media (max-width: 400px) {
+  h2 {
+    font-size: 1.5em;
+  }
+
+  .texter {
+    display: none;
+  }
+}
