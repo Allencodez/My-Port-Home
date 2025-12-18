@@ -1,4 +1,3 @@
-
 @font-face {
   font-family: "Poppins";
   src: url("./fonts/Poppins-Regular.ttf");
@@ -223,12 +222,8 @@ footer a:hover {
   }
 
   nav li:first-child {
-    display: block;
-    flex: 1;
-  }
-
-  nav li a {
     display: flex;
+    flex: 1;
   }
 
   header {
@@ -271,7 +266,7 @@ footer a:hover {
     display: none;
   }
 
-  .open-side-btn{
+  .open-side-btn {
     display: block;
     margin-right: 2em;
   }
