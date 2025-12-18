@@ -222,8 +222,7 @@ footer a:hover {
     display: none;
   }
 
-  nav li:first-child,
-  nav li:last-child {
+  nav li:first-child {
     display: block;
     flex: 1;
   }
