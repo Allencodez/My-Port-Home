@@ -14,15 +14,42 @@
   </head>
   <body>
     <header>
-      <nav>
+
+      <div class="menu">
+        <p>Allencrypt</p>
+        <div class="right">
+        <a href="" class="head">Twitter</a>
+        <a href="" class="head">Facebook</a>
+        <a href="" class="head">My Work</a>
+        <a href="" class="head last-child">Contact</a>
+
+        <button class="toggle">
+          <img
+            height="30px"
+            width="30px"
+            src="./icons home/icons8-menu-64.png"
+            alt=""
+          />
+        </button>
+      </div>
+
+      <div class="sub-menu">
+        <a href="" class="options">Twitter</a>
+        <a href="" class="options">Facebook</a>
+        <a href="" class="options">My Work</a>
+        <a href="" class="options">Contact</a>
+      </div>
+    </div>
+
+      <!-- <nav>
         <ul>
           <li><a href="index.html">AllenCrypt</a></li>
           <li><a class="bar" href="index.html">Twitter</a></li>
           <li><a class="bar" href="index.html">Facebook</a></li>
           <li><a href="index.html">My Work</a></li>
-          <li><a href="index.html">Contact</a></li>
+          <li><a href="index.html">Contact</a></li> -->
 
-          <input type="checkbox" id="sidebar-active" />
+          <!-- <input type="checkbox" id="sidebar-active" />
           <label for="sidebar-active" class="open-side-btn">
             <img
               height="40px"
@@ -30,20 +57,9 @@
               src="./icons home/icons8-menu-64.png"
               alt=""
             />
-          </label>
-
-          <div class="links-ctn">
-            <label for="sidebar-active" class="closed-side-btn">
-              <img
-                height="40px"
-                width="30px"
-                src="./icons home/icons8-x-24.png"
-                alt=""
-              />
-            </label>
-          </div>
-        </ul>
-      </nav>
+          </label> -->
+        <!-- </ul>
+      </nav> -->
       <div class="flex-ctn">
         <img
           height="400px"
@@ -169,5 +185,17 @@
         <a href="mailto:barnault230@gmail.com">email</a>
       </div>
     </footer>
+
+     <script>
+        let subMenu = document.querySelector(".sub-menu");
+
+        window.addEventListener("click", (e) => {
+            if(e.target.closest(".toggle")){
+                subMenu.style.display = "flex";
+            } else{
+                subMenu.style.display = "none";
+            }
+        })
+    </script>
   </body>
 </html>
